@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading page</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body onload="hide_loading();">
+    <h3>Home</h3>
+<div class="loading overlay">
+    <div class="lds-ripple"><div></div><div></div></div>
+</div>
+<button onclick="tampil_data_ajax()">load data ajax</button>
+<div id="data_ajax"></div>
+    <?php
+    for ($i=0; $i<10000; $i++){
+        echo "<li>$i</li>";
+    }
+
+?>
+    <script src="script.js"></script>
+</body>
+</html>
